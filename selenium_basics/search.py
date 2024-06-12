@@ -46,8 +46,7 @@ def task4():
     driver.get("https://www.ebay.com/")
     try:
         search_button = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.XPATH, "//td[@class='gh-td gh-sch-btn']"))
-        )
+            EC.presence_of_element_located((By.XPATH, "//td[@class='gh-td gh-sch-btn']")))
         get_url = driver.current_url
         print("The current url is:" + str(get_url))
         search_field = driver.find_element(By.XPATH, "//input[@placeholder = 'Search for anything']")
